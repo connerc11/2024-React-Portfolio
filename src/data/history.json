@@ -4,7 +4,7 @@
       "organisation": "JPMorgan & Chase",
       "startDate": "Apr, 2022",
       "endDate": "Feb 2024",
-      "experiences": ["Worked on rest Api's", "Did a lot of unit testing for code coverage", "Worked on making our teams application fully automated"],
+      "experiences": ["Worked on rest api's", "Worked on unit testing for code coverage", "Worked on making our teams application fully automated"],
       "imageSrc": "experience/jpmChase.png"
     },
     {
