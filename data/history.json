@@ -1,0 +1,18 @@
+[
+    {
+      "role": "Software Engineer 1",
+      "organisation": "JPMorgan & Chase",
+      "startDate": "Apr, 2022",
+      "endDate": "Feb 2024",
+      "experiences": ["Worked on rest api's", "Worked on unit testing for code coverage", "Worked on making our teams application fully automated"],
+      "imageSrc": "experience/jpmChase.png"
+    },
+    {
+      "role": "Instructional Grader",
+      "organisation": "2U/Edx",
+      "startDate": "Feb, 2022",
+      "endDate": "March 2024",
+      "experiences": ["Worked on grading students assignments", "Graded over 1000 assignments of different languages and context", "Provided ample feedback about their assignments"],
+      "imageSrc": "experience/2U.png"
+    }
+  ]

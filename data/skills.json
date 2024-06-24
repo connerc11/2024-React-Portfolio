@@ -1,0 +1,38 @@
+[
+    {
+      "title": "HTML",
+      "imageSrc": "skills/html.png"
+    },
+    {
+      "title": "CSS",
+      "imageSrc": "skills/css.png"
+    },
+    {
+      "title": "React.Js",
+      "imageSrc": "skills/react.png"
+    },
+    {
+      "title": "Java",
+      "imageSrc": "skills/Java.png"
+    },
+    {
+      "title": "SQL",
+      "imageSrc": "skills/sql.png"
+    },
+    {
+      "title": "OracleDB",
+      "imageSrc": "skills/oracleDB.png"
+    },
+    {
+      "title": "JavaScript",
+      "imageSrc": "skills/javaScript.png"
+    },
+    {
+      "title": "Vite",
+      "imageSrc": "skills/vite.png"
+    },
+    {
+      "title": "Selenium",
+      "imageSrc": "skills/selenium.png"
+    }
+  ]

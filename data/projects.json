@@ -1,0 +1,26 @@
+[
+    {
+      "title": "AI Application",
+      "imageSrc": "projects/project.png",
+      "description": "This project is currently under development and will be deployed soon!",
+      "skills": ["React", "Node"],
+      "demo": "https://www.example.com",
+      "source": "https://github.com/connerc11/AI"
+    },
+    {
+      "title": "Weather App",
+      "imageSrc": "projects/weatherApp.png",
+      "description": "This is a project designed to accurately receive the weather and future forecast",
+      "skills": ["WeatherAPI", "JavaScript", "Node", "Bootstrap"],
+      "demo": "https://connerc11.github.io/Weather-Dashboard/",
+      "source": "https://github.com/connerc11/Weather-Dashboard"
+    },
+    {
+      "title": "Trvia Brews",
+      "imageSrc": "projects/trviaBrews.png",
+      "description": "This project is a trivia game that answers questions and provides brewery suggestions near you",
+      "skills": ["CSS", "JavaScript", "Node"],
+      "demo": "https://connerc11.github.io/Trivia-Brews-Project1/",
+      "source": "https://github.com/connerc11/Trivia-Brews-Project1"
+    }
+  ]
