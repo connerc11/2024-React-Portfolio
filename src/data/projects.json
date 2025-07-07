@@ -1,11 +1,11 @@
 [
     {
-      "title": "AI Application",
+      "title": "Game On",
       "imageSrc": "projects/work.png",
-      "description": "This project is currently under development and will be deployed soon!",
+      "description": "This is a platform to play different games with friends and family. It includes a feature where you can view your leaderboards.",
       "skills": ["React", "Node"],
-      "demo": "https://www.example.com",
-      "source": "https://github.com/connerc11/AI"
+      "demo": "https://game-on-phi.vercel.app/",
+      "source": "https://github.com/connerc11/GameON"
     },
     {
       "title": "Weather App",
@@ -16,11 +16,11 @@
       "source": "https://github.com/connerc11/Weather-Dashboard"
     },
     {
-      "title": "Trvia Brews",
+      "title": "SleepLess Stocks",
       "imageSrc": "projects/trviaBrews.png",
-      "description": "This project is a trivia game that answers questions and provides brewery suggestions near you",
-      "skills": ["CSS", "JavaScript", "Node"],
-      "demo": "https://connerc11.github.io/Trivia-Brews-Project1/",
-      "source": "https://github.com/connerc11/Trivia-Brews-Project1"
+      "description": "This is a blog based platform that allows you to look at some stock ideas and also allows you to cereate a watchlist with price targets",
+      "skills": ["React", "JavaScript", "Node", "Vite"],
+      "demo": "https://sleep-less-stocks-three.vercel.app/login",
+      "source": "https://github.com/connerc11/SleepLess-Stocks"
     }
   ]
