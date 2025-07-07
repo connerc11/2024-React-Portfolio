@@ -1,7 +1,7 @@
 [
     {
       "title": "Game On",
-      "imageSrc": "projects/work.png",
+      "imageSrc": "projects/gameon.png",
       "description": "This is a platform to play different games with friends and family. It includes a feature where you can view your leaderboards.",
       "skills": ["React", "Node"],
       "demo": "https://game-on-phi.vercel.app/",
@@ -17,7 +17,7 @@
     },
     {
       "title": "SleepLess Stocks",
-      "imageSrc": "projects/trviaBrews.png",
+      "imageSrc": "projects/stock.png",
       "description": "This is a blog based platform that allows you to look at some stock ideas and also allows you to cereate a watchlist with price targets",
       "skills": ["React", "JavaScript", "Node", "Vite"],
       "demo": "https://sleep-less-stocks-three.vercel.app/login",
