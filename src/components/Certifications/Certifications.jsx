@@ -4,35 +4,73 @@ import styles from "./Certifications.module.css";
 import { getImageUrl } from "../../utils";
 
 export const Certifications = () => {
+  const certifications = [
+    {
+      id: 1,
+      title: "Full Stack Web Development",
+      issuer: "University of Central Florida",
+      date: "December 2021",
+      image: "certifications/bootcampCertificate.png",
+      description: "Comprehensive 6-month bootcamp covering modern web development technologies including React, Node.js, and database management.",
+      skills: ["React", "Node.js", "JavaScript", "HTML/CSS", "MySQL", "MongoDB"]
+    },
+    {
+      id: 2,
+      title: "AWS Cloud Practitioner",
+      issuer: "Amazon Web Services",
+      date: "April 2023",
+      image: "certifications/AWScloudpractioner.png",
+      description: "Foundational certification demonstrating understanding of AWS cloud concepts, services, and best practices.",
+      skills: ["AWS", "Cloud Computing", "EC2", "S3", "IAM", "VPC"]
+    }
+  ];
+
   return (
     <section className={styles.container} id="certifications">
-      <h2 className={styles.title}>Certifications</h2>
-      <div className={styles.content}>
-        {/* <img
-          src={getImageUrl("certifications/certificateImage.png")}
-          alt="UCF Bootcamp"
-          className={styles.certificateImage}
-        /> */}
-        <ul className={styles.aboutItems}>
-          <li className={styles.aboutItem}>
-            <img className = {styles.aboutItem6} src={getImageUrl("certifications/bootcampCertificate.png")} alt="bootcamp cert" />
-            <div className={styles.aboutItemText}>
-              <h3>Bootcamp Certification</h3>
-              <p>
-                I received a certification from the University of Central florida in Full Stack Web Development in a 6 month course: Received Dec 2021
-              </p>
+      <div className={styles.header}>
+        <h2 className={styles.title}>Certifications & Achievements</h2>
+        <p className={styles.subtitle}>
+          Professional certifications that validate my technical expertise and commitment to continuous learning.
+        </p>
+      </div>
+      
+      <div className={styles.certificationsGrid}>
+        {certifications.map((cert) => (
+          <div key={cert.id} className={styles.certificationCard}>
+            <div className={styles.cardHeader}>
+              <div className={styles.imageContainer}>
+                <img 
+                  className={styles.certImage} 
+                  src={getImageUrl(cert.image)} 
+                  alt={`${cert.title} certification`} 
+                />
+              </div>
+              <div className={styles.badge}>
+                <span className={styles.badgeText}>Certified</span>
+              </div>
             </div>
-          </li>
-          <li className={styles.aboutItem}>
-            <img className = {styles.aboutItem6} src={getImageUrl("certifications/AWScloudpractioner.png")} alt="AWS Cert" />
-            <div className={styles.aboutItemText}>
-              <h3>AWS Cloud Practioner Certification</h3>
-              <p>
-                I have successfully passed the AWS Cloud Practioner Exam: Received Apr 2023
-              </p>
+            
+            <div className={styles.cardContent}>
+              <h3 className={styles.certTitle}>{cert.title}</h3>
+              <div className={styles.issuerInfo}>
+                <span className={styles.issuer}>{cert.issuer}</span>
+                <span className={styles.date}>{cert.date}</span>
+              </div>
+              <p className={styles.description}>{cert.description}</p>
+              
+              <div className={styles.skillsContainer}>
+                <h4 className={styles.skillsTitle}>Key Technologies:</h4>
+                <div className={styles.skillsTags}>
+                  {cert.skills.map((skill, index) => (
+                    <span key={index} className={styles.skillTag}>
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
             </div>
-          </li>
-        </ul>
+          </div>
+        ))}
       </div>
     </section>
   );

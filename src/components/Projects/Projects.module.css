@@ -1,26 +1,88 @@
 @import "../../vars.css";
 
 .container {
-  margin-top: 76px;
+  padding: 80px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, rgba(87, 108, 188, 0.05) 0%, rgba(18, 47, 102, 0.05) 100%);
+  border-radius: 24px;
+  margin-top: 80px;
+  position: relative;
+  overflow: hidden;
   color: var(--color-text);
-  margin-left: 10%;
-  margin-right: 10%;
+}
+
+.container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 30%, rgba(87, 108, 188, 0.03) 50%, transparent 70%);
+  pointer-events: none;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 60px;
+  position: relative;
+  z-index: 1;
 }
 
 .title {
-  font-size: 35px;
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
   font-weight: 700;
-  letter-spacing: 1.75px;
-  text-transform: uppercase;
+  margin-bottom: 16px;
+  background: linear-gradient(45deg, var(--color-text), var(--color-primary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.2;
+}
+
+.subtitle {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
 }
 
 .projects {
-  margin-top: 37px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
-  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 60px 20px;
+    margin-top: 40px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  
+  .header {
+    margin-bottom: 40px;
+  }
+  
+  .projects {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    padding: 40px 16px;
+    border-radius: 16px;
+  }
+  
+  .projects {
+    gap: 20px;
+  }
 }

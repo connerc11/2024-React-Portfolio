@@ -1,83 +1,200 @@
 @import "../../vars.css";
 
- .img2{
-    padding-top: 40px;
-    margin-top: 40px;
-    padding-left: 20px;
-    margin: auto;
-    align-items: center;
-    display: flex;
-    max-width: 25%;
-    max-height: 25%
-    } 
-
 .container {
+  background: linear-gradient(135deg, var(--color-dark) 0%, var(--color-secondary) 100%);
   color: var(--color-text);
-  margin-top: 20px;
-  background-color: var(--color-secondary);
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
   width: 100vw;
-  padding: 58px 10%;
-  gap: 10px;
 }
 
-.text h2 {
-  font-size: 80px;
+.container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none"><polygon fill="%23ffffff08" points="1000,4 1000,100 0,100"/></svg>');
+  pointer-events: none;
+}
+
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: 700;
-  letter-spacing: 4px;
+  margin-bottom: 20px;
+  background: linear-gradient(45deg, var(--color-text), var(--color-primary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.2;
 }
 
-.text p {
-  font-size: 40px;
-  font-weight: 400;
-  letter-spacing: 2px;
+.subtitle {
+  font-size: clamp(1.1rem, 2vw, 1.3rem);
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
 }
 
-.links {
-  display: flex;
-  /* flex-direction: column; */
-  align-items: flex-start;
-  list-style: none;
-  /* gap: 10px; */
-  margin-top: 37px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  /* align-items: center; */
-  justify-content: center;
-  gap: 15px;
-  width: 100%;
+.contactGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 60px;
 }
 
-.link {
+.contactCard {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 30px;
   display: flex;
   align-items: center;
-  gap: 25px;
+  gap: 20px;
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
-.link a {
+.contactCard:hover {
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--color-primary);
+  box-shadow: 0 20px 40px rgba(87, 108, 188, 0.2);
+}
+
+.iconWrapper {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(45deg, var(--color-primary), var(--color-secondary));
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.contactCard:hover .iconWrapper {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.contactIcon {
+  width: 32px;
+  height: 32px;
+  filter: brightness(1.2);
+}
+
+.contactInfo {
+  flex: 1;
+}
+
+.contactInfo h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0 0 8px 0;
   color: var(--color-text);
-  text-decoration: none;
-  font-size: 30px;
-  font-weight: 400;
-  letter-spacing: 1.5px;
 }
 
-@media screen and (max-width: 830px) {
+.contactLink {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 400;
+  transition: color 0.3s ease;
+  word-break: break-all;
+}
+
+.contactLink:hover {
+  color: var(--color-primary);
+}
+
+.footer {
+  text-align: center;
+  padding-top: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footerText {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
   .container {
-    flex-direction: column;
-    gap: 23px;
+    padding: 60px 0;
   }
-
-  .text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  
+  .content {
+    padding: 0 20px;
   }
+  
+  .header {
+    margin-bottom: 40px;
+  }
+  
+  .contactGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+  
+  .contactCard {
+    padding: 20px;
+    flex-direction: row;
+    text-align: left;
+  }
+  
+  .iconWrapper {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .contactIcon {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .contactInfo h3 {
+    font-size: 1.1rem;
+  }
+  
+  .contactLink {
+    font-size: 0.9rem;
+  }
+}
 
-  .links {
-    align-items: center;
+@media screen and (max-width: 480px) {
+  .contactCard {
+    padding: 16px;
+    gap: 16px;
+  }
+  
+  .iconWrapper {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .contactIcon {
+    width: 20px;
+    height: 20px;
   }
 }
