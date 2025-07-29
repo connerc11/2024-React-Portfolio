@@ -12,7 +12,7 @@
       "imageSrc": "projects/weatherApp.png",
       "description": "This is a project designed to accurately receive the weather and future forecast",
       "skills": ["WeatherAPI", "JavaScript", "Node", "Bootstrap"],
-      "demo": "https://connerc11.github.io/Weather-Dashboard/",
+      "demo": "https://weather-dashboard-seven-tau.vercel.app",
       "source": "https://github.com/connerc11/Weather-Dashboard"
     },
     {

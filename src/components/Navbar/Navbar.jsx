@@ -29,8 +29,7 @@ export const Navbar = () => {
     <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ''}`}>
       <div className={styles.navContainer}>
         <a href="#" className={styles.logo}>
-          <span className={styles.logoText}>Conner</span>
-          <span className={styles.logoDot}>.</span>
+          <span className={styles.logoText}>Conner's Portfolio</span>
         </a>
         
         <div className={styles.menu}>
